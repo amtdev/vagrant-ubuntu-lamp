@@ -65,6 +65,15 @@ Vagrant.configure("2") do |config|
         # Update the CLI PHP version
         sudo update-alternatives --set php /usr/bin/php7.4
 
+        #install node js via nvm https://github.com/nvm-sh/nvm#install--update-script
+        sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+        #install latest LTS version (hydrogen as of this commit)
+        nvm install lts/hydrogen
 
   SHELL
  end

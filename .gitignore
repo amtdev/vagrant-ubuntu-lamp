@@ -1,0 +1,23 @@
+.rake_test_cache
+
+
+###
+# Ignore Chef key files and secrets
+###
+
+.chef
+.vagrant
+#Vagrantfile
+.buildpath
+.settings/
+.idea/
+.project
+dummy.php
+
+*.log
+*.sql
+*.crt
+*.key
+*.csr
+*.json
+*.lock
